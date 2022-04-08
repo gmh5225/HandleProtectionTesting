@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HandleProtectionTesting", "HandleProtectionTesting\HandleProtectionTesting.vcxproj", "{4C5A6F01-0C8B-4160-A5D5-5AB74BD3AF99}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93EC3005-E0F9-4327-9B54-57F74EA4B09D} = {93EC3005-E0F9-4327-9B54-57F74EA4B09D}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kcpplib", "kcpplib\kcpplib.vcxproj", "{93EC3005-E0F9-4327-9B54-57F74EA4B09D}"
 EndProject

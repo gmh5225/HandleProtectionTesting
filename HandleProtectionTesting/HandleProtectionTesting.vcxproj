@@ -129,11 +129,13 @@
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
     <IncludePath>$(VC_IncludePath);$(SolutionDir);$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Output;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Output</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
     <IncludePath>$(VC_IncludePath);$(SolutionDir);$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)Output;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)Output</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
@@ -150,6 +152,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Link>
       <AdditionalDependencies>bufferoverflowK.lib;libcntpr.lib;wdm.lib;wdmsec.lib;aux_klib.lib;Ntstrsafe.lib;Netio.lib;tdi.lib;fltMgr.lib;Ntoskrnl.lib;kcpplib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
     </Link>
     <ClCompile>
       <TreatWarningAsError>false</TreatWarningAsError>
@@ -158,6 +161,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Link>
       <AdditionalDependencies>bufferoverflowK.lib;libcntpr.lib;wdm.lib;wdmsec.lib;aux_klib.lib;Ntstrsafe.lib;Netio.lib;tdi.lib;fltMgr.lib;Ntoskrnl.lib;kcpplib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <EntryPointSymbol>DriverEntry</EntryPointSymbol>
     </Link>
     <ClCompile>
       <TreatWarningAsError>false</TreatWarningAsError>
